@@ -6,7 +6,7 @@ package com.greenfox.exam.spring.model;
 public class ResponseForm {
 
   private long id;
-  private Question[] projectList;
+  private Project[] projectList;
 
   public ResponseForm() {
   }
@@ -19,11 +19,11 @@ public class ResponseForm {
     this.id = id;
   }
 
-  public Question[] getProjectList() {
+  public Project[] getProjectList() {
     return projectList;
   }
 
-  public void setProjectList(Question[] projectList) {
+  public void setProjectList(Project[] projectList) {
     this.projectList = projectList;
   }
 }
