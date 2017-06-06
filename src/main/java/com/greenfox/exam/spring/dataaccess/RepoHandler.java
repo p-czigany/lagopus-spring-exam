@@ -3,6 +3,7 @@ package com.greenfox.exam.spring.dataaccess;
 import com.greenfox.exam.spring.model.Answer;
 import com.greenfox.exam.spring.model.Project;
 import com.greenfox.exam.spring.model.Question;
+import com.greenfox.exam.spring.model.Quiz;
 import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -22,6 +23,9 @@ public class RepoHandler {
   @Autowired
   ProjectRepo projectRepo;
 
+  @Autowired
+  QuizRepo quizRepo;
+
   public ArrayList<Question> allQuestions() {
     return questionRepo.findAll();
   }
@@ -32,5 +36,9 @@ public class RepoHandler {
 
   public ArrayList<Project> allProjects() {
     return projectRepo.findAll();
+  }
+
+  public void saveQuiz(Quiz quiz) {
+    quizRepo.save(quiz);
   }
 }
