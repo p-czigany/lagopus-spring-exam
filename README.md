@@ -106,15 +106,26 @@ Your task is to create a RESTful quiz application with full of greenfox question
 
 Please define it with your own words. We are expecting at least 3 distinct ideas that you write here:
 
+Their common thing is that neither of them can be instantiated.
+But while abstract classes are groupings of things (with actual properties and behaviors) which we want to specify more before talking about a specific individual (instance), interfaces are only groups of behaviors which are not even implemented yet.
+
+A class can extend only one other class (abstract or not), but it can implement multiple interfaces, IOW it cannot be the child of different parents (which are not in a parent-child relationship) but it can have the behaviors of different interfaces.
+
 
 ### Analyzing URL
 Please name the parts of the URL below.
 [<img src="assets/URLanalysis.png" alt="parts of URL" />](assets/URLanalysis.png?raw=true)
 
-1:  
-2:  
-3:  
-4:  
-5:  
-6:  
-7:  
+1. - protocol / scheme
+
+2. - sub-domain
+
+3. - domain name
+
+4. - port
+
+5. - (file) path
+
+6. - ? marking the start of the query string
+
+7. - query string: parameter names and (after '=') values

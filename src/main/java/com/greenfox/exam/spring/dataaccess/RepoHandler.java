@@ -1,6 +1,7 @@
 package com.greenfox.exam.spring.dataaccess;
 
 import com.greenfox.exam.spring.model.Answer;
+import com.greenfox.exam.spring.model.Project;
 import com.greenfox.exam.spring.model.Question;
 import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -27,5 +28,9 @@ public class RepoHandler {
 
   public Answer answerById(long id) {
     return answerRepo.findOneById(id);
+  }
+
+  public ArrayList<Project> allProjects() {
+    return projectRepo.findAll();
   }
 }
