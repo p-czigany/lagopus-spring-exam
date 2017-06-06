@@ -1,6 +1,7 @@
 package com.greenfox.exam.spring.dataaccess;
 
 import com.greenfox.exam.spring.model.Question;
+import java.util.ArrayList;
 import org.springframework.data.repository.CrudRepository;
 
 /**
@@ -8,4 +9,5 @@ import org.springframework.data.repository.CrudRepository;
  */
 public interface QuestionRepo extends CrudRepository<Question, Long> {
 
+  ArrayList<Question> findAll();
 }

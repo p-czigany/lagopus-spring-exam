@@ -1,5 +1,7 @@
 package com.greenfox.exam.spring.dataaccess;
 
+import com.greenfox.exam.spring.model.Question;
+import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -14,4 +16,8 @@ public class RepoHandler {
 
   @Autowired
   QuestionRepo questionRepo;
+
+  public ArrayList<Question> allQuestions() {
+    return questionRepo.findAll();
+  }
 }

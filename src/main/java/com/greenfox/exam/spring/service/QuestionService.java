@@ -1,6 +1,9 @@
 package com.greenfox.exam.spring.service;
 
 import com.greenfox.exam.spring.dataaccess.RepoHandler;
+import com.greenfox.exam.spring.model.Question;
+import com.greenfox.exam.spring.model.Quiz;
+import java.util.ArrayList;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
@@ -12,4 +15,18 @@ public class QuestionService {
 
   @Autowired
   RepoHandler repoHandler;
+
+  public Quiz chooseFive() {
+    Quiz five = new Quiz();
+    five.setId(1l);
+    ArrayList<Question> questionBase = repoHandler.allQuestions();
+    Question[] questions = new Question[5];
+    for (int i = 0; i < 5; i++) {
+      int pickingNumber = (int) (Math.random() * questionBase.size());
+      questions[i] = questionBase.get(pickingNumber);
+      questionBase.remove(pickingNumber);
+    }
+    five.setQuestions(questions);
+    return five;
+  }
 }
