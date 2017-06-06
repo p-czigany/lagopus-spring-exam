@@ -16,7 +16,7 @@ public class Project {
   private long id;
   private String nameOfProject;
 
-  public Project(String nameOfProject) {
+  public Project() {
   }
 
   public long getId() {
